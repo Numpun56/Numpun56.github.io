@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+    <!-- Include your CSS file if needed -->
+    <!-- <link rel="stylesheet" href="your-styles.css"> -->
+</head>
+<body>
+    <div id="Summary">
+        <h1>Statement</h1> <hr>
+        
+        <div class="TotolIncome">
+            <label>Totol Income :</label>
+            <button onclick="calculateTotol('Income')">Option</button>
+            <div class="InCOpContain"> 
+                <input id="IncomeSumperWeek" type="number"> <label>Week</label> <br>
+                <input id="IncomeSumperMonth" type="number"> <label>Month</label> <br>
+                <input id="IncomeDomain" type="date"> to <input id="IncomeRange" type="date"><br>
+                <h3 id="TotolIncomeDisplay"> </h3>
+            </div>
+        </div>
+
+        <div class="TotolOutcome">
+            <label>Totol Outcome :</label>
+            <button onclick="calculateTotol('Outcome')">Option</button>
+            <div class="OutcomeOpContain"> 
+                <input id="OutcomeSumperWeek" type="number"> <label>Week</label> <br>
+                <input id="OutcomeSumperMonth" type="number"> <label>Month</label> <br>
+                <input id="OutcomeDomain" type="date"> to <input id="OutcomeRange" type="date"><br>
+                <h3 id="TotolOurcomeDisplay"> </h3>
+            </div>
+        </div>
+        
+        <label >Totol</label> 
+        <H3 id="Totol"> 00 </H3>
+    
+        <br> <br> <hr>
+    
+        <div class="AverageIncome">
+            <label>Average Income :</label>
+            <button onclick="calculateAverage('AverIncome')">Option</button>
+            <div class="AverIncomeContain"> 
+                <input id="AverIncomeperWeek" type="number"> <label>Week</label> <br>
+                <input id="AverIncomeperMonth" type="number"> <label>Month</label> <br>
+                <input id="AverIncomeDomain" type="date"> to <input id="AverIncomeRange" type="date"><br>
+                <h3 id="AverIncomeDisplay"> </h3>
+            </div>
+        </div>
+    
+        <div class="AverageOutcome">
+            <label>Average Outcome :</label>
+            <button onclick="calculateAverage('AverOutcome')">Option</button>
+            <div class="AverOutcomeContain"> 
+                <input id="AverOutcomeperWeek" type="number"> <label>Week</label> <br>
+                <input id="AverOutcomeperMonth" type="number"> <label>Month</label> <br>
+                <input id="AverOutcomeDomain" type="date"> to <input id="AverOutcomeRange" type="date"><br>
+                <h3 id="AverOutcomeDisplay"> </h3>
+            </div>
+        </div>
+    
+        <label>Credit</label> 
+        <H3 id="Credit"> 00 </H3>
+    </div>
+
+    <script>
+        function calculateTotol(type) {
+            var sumperWeek = parseFloat(document.getElementById(type + "SumperWeek").value) || 0;
+            var sumperMonth = parseFloat(document.getElementById(type + "SumperMonth").value) || 0;
+
+            var domain = new Date(document.getElementById(type + "Domain").value);
+            var range = new Date(document.getElementById(type + "Range").value);
+
+            var days = (range - domain) / (1000 * 60 * 60 * 24);
+
+            var total = sumperWeek + sumperMonth * (days / 30);
+
+            document.getElementById("Totol" + type + "Display").textContent = total.toFixed(2);
+        }
+
+        function calculateAverage(type) {
+            var sumperWeek = parseFloat(document.getElementById(type + "SumperWeek").value) || 0;
+            var sumperMonth = parseFloat(document.getElementById(type + "SumperMonth").value) || 0;
+
+            var domain = new Date(document.getElementById(type + "Domain").value);
+            var range = new Date(document.getElementById(type + "Range").value);
+
+            var days = (range - domain) / (1000 * 60 * 60 * 24);
+
+            var average = (sumperWeek + sumperMonth * (days / 30)) / days;
+
+            document.getElementById(type + "Display").textContent = average.toFixed(2);
+        }
+    </script>
+</body>
+</html>

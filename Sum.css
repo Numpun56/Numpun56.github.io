@@ -1,0 +1,168 @@
+
+/*NavBar*/
+.Header {
+    margin: 0%;
+    display: block;
+    text-align: center;
+    border-style: solid;
+    background-color: #121826;
+    border-radius: 1px ;
+    
+}
+
+.topnav {
+    background-color: #000000;
+    overflow: hidden;
+  }
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+#HeaderH1 {
+    color: #ffffff;
+}
+/*Sum*/
+.TotolIncome {
+    display: block;
+    margin: auto;
+    float: inline-start;
+}
+.TotolOutcome {
+    display: block;
+    margin: auto;
+    float: left;
+    padding-left: 30px;
+}
+.AverageIncome {
+    display: block;
+    float: inline-start;
+}
+.AverageOutcome {
+    display: block;
+    float: left;
+    padding-left: 30px;
+}
+
+/*AssignNote*/
+
+#LogginBox {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border-style:solid ;
+    border-radius: 4px;
+    float: inline-start;
+    padding: 4px;
+    background-image: url(Picture/Dear.png) ;
+}
+.InputBar {
+    border-radius: 5px;
+    background-color: yellow ;
+    border-color: black ;
+    text-align: center;
+}
+
+#Check {
+    display: block;
+    padding-top: 18em ;
+}
+#MonneyCheck {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border-style: solid;
+    float: inline-start;
+    padding: 10px;
+    border-radius: 5px;
+}
+#NumSign {
+    padding-right: 10em;
+}
+.DateboxAccount {
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#Income {
+    border-radius: 5px;
+    background-color: lightgreen ;
+}
+
+#Outcome {
+    border-radius: 5px;
+    background-color: lightcoral;
+}
+#enroll {
+    border-radius: 5px;
+    background-color: plum;
+}
+
+.footer  {
+    display: block;
+    clear: both;
+    background-color: #121826;
+    position: sticky;
+  }
+  #FooterElement {
+    display: block;
+    color: white;
+    padding-left: 2em;
+    position: static;
+  }
+  #contact {
+    display: block;
+    text-align: right;
+    padding-right: 2em;
+    float: left;
+  }
+
+  .pagination {
+    align-self: self-end;
+}
+.pagination a{ padding: 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: darkgray;
+    display: inline-block;
+}
+
+
+.pagination {
+    text-align: center;
+    }
+
+.pagination a:hover:not(.active){
+    background-color: lightgreen;
+}
+    
+
+.pagination .active{
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+
+body {
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+.Main {
+    flex: 1;
+    margin: 0;
+}
