@@ -22,11 +22,69 @@
      
     <Main class="Main"> <br>
         <Main class="Main">
-            <table>
+            <title>Financial Data</title>
+            <style>
+                table {
+                  border-collapse: collapse;
+                  width: 100%;
+                }
             
-            </table>
+                th, td {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+                }
+            
+                th {
+                  background-color: #f2f2f2;
+                }
+              </style>
+            </head>
+            <body>
+            
+              <h2>Financial Data</h2>
+            
+              <table>
+                <tr>
+                  <th>Date</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                  <th>Balance</th>
+                  <th>Running Total</th>
+                </tr>
+                <tr>
+                  <td>31/01/2024</td>
+                  <td>100</td>
+                  <td>112</td>
+                  <td>459.25</td>
+                  <td></td>
+                  <td>2004.75</td>
+                  <td>2464</td>
+                </tr>
+                <tr>
+                  <td>01/02/2024</td>
+                  <td>100</td>
+                  <td>80</td>
+                  <td>529.25</td>
+                  <td></td>
+                  <td>2004.75</td>
+                  <td>2534</td>
+                </tr>
+                <tr>
+                  <td>02/02/2024</td>
+                  <td></td>
+                  <td>85</td>
+                  <td>444.25</td>
+                  <td></td>
+                  <td>2004.75</td>
+                  <td>2449</td>
+                </tr>
+                <!-- Continue adding the remaining rows similarly -->
+                <!-- ... -->
+              </table>
         </Main>
-    </Main>
+    
 
     <footer class="footer">
         <hr>
